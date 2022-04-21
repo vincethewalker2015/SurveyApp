@@ -1,0 +1,46 @@
+<h2>Dates Chosen:</h2>
+
+<p id="notice"><%= notice %></p>
+
+<h4>
+  <strong>Name:</strong>
+  <span class="bold"><%= @survey.name %></span>
+</h4>
+
+<p>
+  <strong>Thu 28 April:</strong>
+  <%= @survey.date1 %>
+</p>
+
+<p>
+  <strong>Fri 29 April:</strong>
+  <%= @survey.date2 %>
+</p>
+
+<p>
+  <strong>Thu 12 May:</strong>
+  <%= @survey.date3 %>
+</p>
+
+<p>
+  <strong>Fri 13 May:</strong>
+  <%= @survey.date4 %>
+</p>
+
+<p>
+  <strong>Thu 27 May:</strong>
+  <%= @survey.date5 %>
+</p>
+
+<p>
+  <strong>Friday 28 May:</strong>
+  <%= @survey.date6 %>
+</p>
+
+<p>
+  <strong>Thu 16 June:</strong>
+  <%= @survey.date7 %>
+</p>
+
+<%= link_to 'Change your Dates', edit_survey_path(@survey), class: "btn btn-primary white" %>
+<%= link_to 'Exit', complete_path, class: "btn btn-primary" %>

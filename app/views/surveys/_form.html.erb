@@ -1,0 +1,57 @@
+<%= form_with(model: survey, local: true) do |form| %>
+  <% if survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+      <% survey.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Thu 28 April" %>
+    <%= form.check_box :date1, {}, "Yes" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Fri 29 April" %>
+    <%= form.check_box :date2, {}, "Yes" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Thu 12 May" %>
+    <%= form.check_box :date3, {}, "Yes" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Fri 13 May" %>
+    <%= form.check_box :date4, {}, "Yes" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Thu 27 May" %>
+    <%= form.check_box :date5, {}, "Yes" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Fri 28 May" %>
+    <%= form.check_box :date6, {}, "Yes" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Thu 16 June" %>
+    <%= form.check_box :date7, {}, "Yes" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
